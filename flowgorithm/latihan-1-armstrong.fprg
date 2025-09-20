@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Latihan 1 - Armstrong"/>
+        <attribute name="authors" value="USER"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-14 12:23:47 AM"/>
+        <attribute name="created" value="VVNFUjtERVNLVE9QLVRRT0lUUkg7MjAyNS0wOS0xMzsxMTo0NzoxNSBQTTsyNzQy"/>
+        <attribute name="edited" value="VVNFUjtERVNLVE9QLVRRT0lUUkg7MjAyNS0wOS0xNDsxMjoyMzo0NyBBTTszOzI4Mzg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="tespangkat, digit, b, tesdigit, jumlah, angka" type="Integer" array="False" size=""/>
+            <assign variable="digit" expression="0"/>
+            <assign variable="jumlah" expression="0"/>
+            <output expression="&quot;Masukkan Angka&quot;" newline="True"/>
+            <input variable="angka"/>
+            <assign variable="tespangkat" expression="angka"/>
+            <assign variable="tesdigit" expression="angka"/>
+            <while expression="tesdigit &gt; 0">
+                <assign variable="tesdigit" expression="tesdigit / 10"/>
+                <assign variable="digit" expression="digit + 1"/>
+            </while>
+            <output expression="&quot;Jumlah digit : &quot; &amp;digit" newline="True"/>
+            <while expression="tespangkat &gt; 0">
+                <assign variable="b" expression="tespangkat mod 10"/>
+                <assign variable="jumlah" expression="jumlah + (b ^ digit)"/>
+                <assign variable="tespangkat" expression="tespangkat / 10"/>
+            </while>
+            <output expression="&quot;Jumlah setelah dipangkatkan : &quot; &amp;jumlah" newline="True"/>
+            <if expression="jumlah = angka">
+                <then>
+                    <output expression="jumlah&amp; &quot; Merupakan Bilangan Armstrong&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="jumlah&amp; &quot; Bukan merupakan Bilangan Armstrong&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
