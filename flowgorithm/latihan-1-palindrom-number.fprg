@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Latihan 1 - Palindrom"/>
+        <attribute name="authors" value="USER"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-13 11:45:57 PM"/>
+        <attribute name="created" value="VVNFUjtERVNLVE9QLVRRT0lUUkg7MjAyNS0wOS0xMzswNTo0ODowOCBQTTsyNzQ4"/>
+        <attribute name="edited" value="VVNFUjtERVNLVE9QLVRRT0lUUkg7MjAyNS0wOS0xMzsxMTo0NTo1NyBQTTsxOzI4NTQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, i, n, b, reverse" type="Integer" array="False" size=""/>
+            <assign variable="reverse" expression="0"/>
+            <output expression="&quot;Masukkan bilangan&quot;" newline="True"/>
+            <input variable="a"/>
+            <assign variable="n" expression="a"/>
+            <while expression="n &gt; 0">
+                <assign variable="b" expression="n mod 10"/>
+                <assign variable="reverse" expression="reverse * 10 + b"/>
+                <assign variable="n" expression="n / 10"/>
+            </while>
+            <if expression="a = reverse">
+                <then>
+                    <output expression="&quot;Benar&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Salah&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

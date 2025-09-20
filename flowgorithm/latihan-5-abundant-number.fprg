@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Latihan 3 - Perfect Number"/>
+        <attribute name="authors" value="USER"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-14 01:51:29 AM"/>
+        <attribute name="created" value="VVNFUjtERVNLVE9QLVRRT0lUUkg7MjAyNS0wOS0xNDsxMjo1Mjo1OCBBTTsyNzMy"/>
+        <attribute name="edited" value="VVNFUjtERVNLVE9QLVRRT0lUUkg7MjAyNS0wOS0xNDswMTo1MToyOSBBTTsyOzI4MzY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, i, n, divisor, sum" type="Integer" array="False" size=""/>
+            <assign variable="divisor" expression="0"/>
+            <assign variable="i" expression="1"/>
+            <assign variable="sum" expression="0"/>
+            <output expression="&quot;Masukkan Angka&quot;" newline="True"/>
+            <input variable="a"/>
+            <assign variable="n" expression="a"/>
+            <while expression="n &gt; i">
+                <if expression="n mod i = 0">
+                    <then>
+                        <assign variable="sum" expression="sum + i"/>
+                        <assign variable="divisor" expression="divisor + 1"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="i" expression="i + 1"/>
+            </while>
+            <output expression="divisor" newline="True"/>
+            <output expression="sum" newline="True"/>
+            <if expression="sum = a">
+                <then>
+                    <output expression="&quot;Perfect Number&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="sum &gt; a">
+                        <then>
+                            <output expression="&quot;Abundant Number&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Deficient Number&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

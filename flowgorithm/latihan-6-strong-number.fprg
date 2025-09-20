@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Latihan 6 - Strong Number"/>
+        <attribute name="authors" value="USER"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-14 12:09:23 PM"/>
+        <attribute name="created" value="VVNFUjtERVNLVE9QLVRRT0lUUkg7MjAyNS0wOS0xNDsxMTowMzoyOCBBTTsyNzI0"/>
+        <attribute name="edited" value="VVNFUjtERVNLVE9QLVRRT0lUUkg7MjAyNS0wOS0xNDsxMjowOToyMyBQTTsyOzI4NTA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, i, n, sum, pangkat" type="Integer" array="False" size=""/>
+            <assign variable="sum" expression="0"/>
+            <assign variable="pangkat" expression="1"/>
+            <output expression="&quot;Masukkan Angka&quot;" newline="True"/>
+            <input variable="a"/>
+            <assign variable="n" expression="a"/>
+            <while expression="n &gt; 0">
+                <assign variable="b" expression="n mod 10"/>
+                <for variable="i" start="1" end="b" direction="inc" step="1">
+                    <assign variable="pangkat" expression="pangkat * i"/>
+                </for>
+                <assign variable="sum" expression="sum + pangkat"/>
+                <assign variable="pangkat" expression="1"/>
+                <assign variable="n" expression="n / 10"/>
+            </while>
+            <output expression="sum&amp; &quot; Jumlah&quot;" newline="True"/>
+            <if expression="sum = a">
+                <then>
+                    <output expression="&quot;Benar&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Salah&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

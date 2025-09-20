@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Latihan 4 - Prime Number"/>
+        <attribute name="authors" value="USER"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-14 01:45:58 AM"/>
+        <attribute name="created" value="VVNFUjtERVNLVE9QLVRRT0lUUkg7MjAyNS0wOS0xNDswMTozOTozOSBBTTsyNzM0"/>
+        <attribute name="edited" value="VVNFUjtERVNLVE9QLVRRT0lUUkg7MjAyNS0wOS0xNDswMTo0NTo1OCBBTTsxOzI4NDA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, i, n, faktor" type="Integer" array="False" size=""/>
+            <assign variable="faktor" expression="0"/>
+            <output expression="&quot;Masukkan Angka&quot;" newline="True"/>
+            <input variable="a"/>
+            <for variable="i" start="1" end="a" direction="inc" step="1">
+                <if expression="a mod i = 0">
+                    <then>
+                        <assign variable="faktor" expression="faktor + 1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="faktor" newline="True"/>
+            <if expression="faktor = 2">
+                <then>
+                    <output expression="&quot;Benar&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Salah&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
